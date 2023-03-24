@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Day🌞 Night mode🌙</title>
+</head>
+
+<body>
+  <h1>꼬끼오🐔</h1>
+  <input type="button" value="night" onclick="
+      document.querySelector('body').style.backgroundColor='black';
+      document.querySelector('body').style.color='white';
+      ">
+  <input type="button" value="day" onclick="
+      document.querySelector('body').style.backgroundColor='white';
+      document.querySelector('body').style.color='black';
+      ">
+
+  <!-- 사용자들에게 유용할 만한 이밴트들 -->
+  <input type="button" value="HI" onclick="alert('HI')">
+  <input type="text" onchange="alert('change')">
+  <!-- javascript keydown event attribute -->
+  <input type="text" onkeydown="alert('key down!')">
+
+  <!-- 대입연산자 -->
+  <!-- name(변수)에 값을 대입하면 변동사항시 자유롭게 바꿔줄 수 있음 -->
+  var name = 'jiin';
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, quo '+name+' harum! Veniam eaque possimus adipisci
+  fugiat, provident, sunt id sequi vel, officia '+name+' vitae rerum voluptatibus blanditiis itaque voluptates totam
+  odit.
+
+  <!-- toggle button -->
+  <!-- 밝은 상태에서 누르면 어둡게 어두운 상태에서 누르면 밝게 -->
+
+  <input type="button" value="black" onclick="
+  if(document.querySelector('body').dataset.mode === 'Day🌞'){
+    document.querySelector('body').style.backgroundColor = 'black'
+    document.querySelector('body').style.color = 'white'
+    document.querySelector('body').dataset.mode = 'Night🌛'
+    this.value = 'Day🌞'
+  } else {
+    document.querySelector('body').style.backgroundColor = 'white'
+    document.querySelector('body').style.color = 'black'
+    document.querySelector('body').dataset.mode = 'Day🌞'
+    this.value = 'Night🌛'
+  }
+  ">
+
+
+
+  <script src="./JS.js"></script>
+</body>
+
+</html>
